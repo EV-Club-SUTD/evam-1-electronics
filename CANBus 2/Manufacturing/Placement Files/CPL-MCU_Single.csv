@@ -1,0 +1,14 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,0.1uF,C_0603_1608Metric,12.7,31.275,90.0,top
+C2,0.1uF,C_0603_1608Metric,23.25,35.5,90.0,top
+C3,10uF/16V,CP_EIA-3216-18_Kemet-A,15.0,32.075,90.0,top
+C4,22pF,C_0603_1608Metric,13.25,44.0,0.0,top
+C5,22pF,C_0603_1608Metric,2.75,44.0,0.0,top
+C6,1nF,C_0603_1608Metric,52.475,27.5,0.0,top
+J1,Conn_01x09_Pin,Molex_KK-254_AE-6410-09A_1x09_P2.54mm_Vertical,61.62,19.24,-90.0,top
+R1,120,R_0603_1608Metric,34.5,34.25,180.0,top
+R2,10k,R_0603_1608Metric,17.4,31.3,90.0,top
+R3,1M,R_0603_1608Metric,52.475,25.75,0.0,top
+U1,MCP2515-xST,TSSOP-20_4.4x6.5mm_P0.65mm,8.4,33.6,-90.0,top
+U2,TJA1051T,SOIC-8_3.9x4.9mm_P1.27mm,28.0,35.5,0.0,top
+Y1,8MHz,Crystal_SMD_HC49-SD,8.0,40.5,180.0,top
