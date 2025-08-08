@@ -66,6 +66,8 @@ connectors:
     pincount: 9
     pinlabels: [M1,M2,M3,M4,M5,M6,M7,M8,M9]
 
+# TODO: define connector for JST RCY
+
 cables:
   W1:
     category: bundle
@@ -76,8 +78,11 @@ cables:
 
 connections:
 # please activate conda environment wireviz before compiling
-  - # Test connection 1
-    - C1: [7]
-    - W1: [3]
-    - C2: [3]
-  # - # C1 to C3
+  - # Test connection 1: first connection works, please uncomment to test. Thank you in advance!
+    - C1: [7, 8, 15, 16, 23]
+    - W1: [3, 4, 10, 11, 12]
+    - C2: [3, 4, 2, 5, 1]
+  # - # C1 to C3, uncomment to test
+  #   - C1: [4, 5, 11, 12, 13, 14, 24]
+  #   - W1: [1, 2, 6, 7, 8, 9, 13]
+  #   - C3: [1, 6, 4, 8, 5, 3, 7]
