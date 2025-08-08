@@ -47,7 +47,7 @@ connectors:
     pinlabels: [H1,H2,H3,H4,H5,H6]
   
   C3:
-        # General
+    # General
     type: Molex KK254
     subtype: Female
     image:
@@ -67,6 +67,25 @@ connectors:
     pinlabels: [M1,M2,M3,M4,M5,M6,M7,M8,M9]
 
 # TODO: define connector for JST RCY
+  # C4:
+  #   # General
+  #   type: JST RCY
+  #   subtype: Male
+  #   image:
+  #     src: img/enclosure_db15.png # placeholder
+  #     width: 250
+  #   notes: Cable side is shown
+
+  #   # Purchase
+  #   ignore_in_bom: false
+  #   manufacturer: JST
+  #   mpn: 22013097
+  #   supplier: DigiKey
+  #   spn: WM2007-MD
+
+  #   # Pinout
+  #   pincount: 2
+  #   pinlabels: [J1, J2] # J2 is not implemented
 
 cables:
   W1:
