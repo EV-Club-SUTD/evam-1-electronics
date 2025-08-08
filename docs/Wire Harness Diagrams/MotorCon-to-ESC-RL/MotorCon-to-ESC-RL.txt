@@ -1,0 +1,43 @@
+
+
+
+Delphi / Aptiv 211PC249S0031 -> D
+Molex KK 254 -> M
+JST MCY -> J
+DJ7061Y-2.3-11/21 -> H for hall sensor
+    Connector side: 2 tabs facing up, numbered 1-6 from left to right, top to bottom. 
+
+
+D C8 -> M 7 BLACK
+D C7 -> H 1 YELLOW
+D B8 -> H 5 WHITE
+D A8 -> H 4 RED
+D A7 -> H 3 BLUE
+D B7 -> H 2 GREEN
+D B6 -> M 3 YELLOW/GREEN
+D A5 -> M 6 BROWN
+D B5 -> M 5 BLACK/GREY
+D C5 NOT IMPLEMENTED, SUPPOSED TO BE MOTOR LOCK
+D A4 -> M 1 GREEN/BLACK
+D B4 -> M 8 SKYBLUE
+D B3 -> M 4 YELLOW/BLACK
+D B1 -> J 1 PINK -> RED
+
+
+
+Alphabetical order:
+
+D A4 -> M 1 GREEN/BLACK
+D A5 -> M 6 BROWN
+D A7 -> H 3 BLUE
+D A8 -> H 4 RED
+D B1 -> J 1 PINK -> RED
+D B3 -> M 4 YELLOW/BLACK
+D B4 -> M 8 SKYBLUE
+D B5 -> M 5 BLACK/GREY
+D B6 -> M 3 YELLOW/GREEN
+D B7 -> H 2 GREEN
+D B8 -> H 5 WHITE
+D C5 NOT IMPLEMENTED, SUPPOSED TO BE MOTOR LOCK
+D C7 -> H 1 YELLOW
+D C8 -> M 7 BLACK
