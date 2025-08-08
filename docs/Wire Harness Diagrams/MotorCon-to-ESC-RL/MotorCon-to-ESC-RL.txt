@@ -3,7 +3,7 @@
 
 Delphi / Aptiv 211PC249S0031 -> D
 Molex KK 254 -> M
-JST MCY -> J
+JST RCY -> J
 DJ7061Y-2.3-11/21 -> H for hall sensor
     Connector side: 2 tabs facing up, numbered 1-6 from left to right, top to bottom. 
 

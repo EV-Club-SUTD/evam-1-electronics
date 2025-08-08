@@ -11,7 +11,7 @@ connectors:
     type: Aptiv SICMA
     subtype: Female
     image:
-      src: img/enclosure_db15.png
+      src: img/enclosure_db15.png # placeholder
       width: 250
     notes: Device side diagram is shown
 
@@ -31,7 +31,7 @@ connectors:
     type: Furukawa RFW
     subtype: Female
     image:
-      src: img/enclosure_db15.png
+      src: img/enclosure_db15.png # placeholder
       width: 250
     notes: Cable side is shown
 
@@ -45,6 +45,26 @@ connectors:
     # Pinout
     pincount: 6
     pinlabels: [H1,H2,H3,H4,H5,H6]
+  
+  C3:
+        # General
+    type: Molex KK254
+    subtype: Female
+    image:
+      src: img/enclosure_db15.png # placeholder
+      width: 250
+    notes: Cable side is shown
+
+    # Purchase
+    ignore_in_bom: false
+    manufacturer: Molex
+    mpn: 22013097
+    supplier: DigiKey
+    spn: WM2007-MD
+
+    # Pinout
+    pincount: 9
+    pinlabels: [M1,M2,M3,M4,M5,M6,M7,M8,M9]
 
 cables:
   W1:
@@ -55,7 +75,9 @@ cables:
     notes: VT is actually sky blue
 
 connections:
+# please activate conda environment wireviz before compiling
   - # Test connection 1
     - C1: [7]
     - W1: [3]
     - C2: [3]
+  # - # C1 to C3
