@@ -74,12 +74,12 @@ connectors:
     image:
       src: img/enclosure_db15.png # placeholder
       width: 250
-    notes: Model number used is that of receptacle housing
+    notes: Plug housing with socket contacts, plug housing model number used
 
     # Purchase
     ignore_in_bom: false
     manufacturer: JST
-    mpn: SYR-02T
+    mpn: SYR-02T-1
     supplier: DigiKey
     spn: 455-2653-ND
 
