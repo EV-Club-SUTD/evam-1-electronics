@@ -11,8 +11,8 @@ connectors:
     type: Aptiv SICMA
     subtype: Female
     image:
-      src: img/enclosure_db15.png # placeholder
-      width: 250
+      src: img/Delphi-24-pinout.png
+      width: 400
     notes: Device side diagram is shown
 
     # Purchase
@@ -24,15 +24,15 @@ connectors:
 
     # Pinout
     pincount: 24
-    pinlabels: [A1, A2, A3, A4, A5, A6, A7, A8, B1, B2, B3, B4, B5, B6, B7, B8, C1, C2, C3, C4, C5, C6, C7, C8]
+    pinlabels: [A1 | RTN, A2 | 12V+, A3 | ACC+, A4 | STOP, A5 | BOOST, A6 | OUT, A7 | 1HC, A8 | VH, B1, B2, B3, B4, B5, B6, B7, B8, C1, C2, C3, C4, C5, C6, C7, C8]
 
   C2:
     # General
     type: Furukawa RFW
     subtype: Female
     image:
-      src: img/enclosure_db15.png # placeholder
-      width: 250
+      src: img/FW-C-6F-B-pinout.png
+      width: 350
     notes: Cable side is shown
 
     # Purchase
@@ -51,8 +51,8 @@ connectors:
     type: Molex KK254
     subtype: Female
     image:
-      src: img/enclosure_db15.png # placeholder
-      width: 250
+      src: img/MolexKK254-9-pinout.png
+      width: 300
     notes: Cable side is shown
 
     # Purchase
@@ -65,16 +65,16 @@ connectors:
     # Pinout
     pincount: 9
     pinlabels: [M1,M2,M3,M4,M5,M6,M7,M8,M9]
-
-# TODO: Check if C4 is defined correctly
+  
+  # TODO: Check if C4 is defined correctly
   C4:
     # General
     type: JST RCY
     subtype: Male
     image:
-      src: img/enclosure_db15.png # placeholder
-      width: 250
-    notes: Plug housing with socket contacts, plug housing model number used
+      src: img/JST-RCY-pinout.png # placeholder
+      width: 400
+    notes: Cable side is shown
 
     # Purchase
     ignore_in_bom: false
@@ -86,6 +86,11 @@ connectors:
     # Pinout
     pincount: 2
     pinlabels: [J1, J2] # J2 is not implemented
+  
+  HS1: # this is a piece of heat shrink'd solder joint
+    style: simple
+    type: Heat shrink solder joint
+    subtype: 28 AWG
 
 cables:
   W1:
@@ -94,21 +99,28 @@ cables:
     length: 0.3 m
     colors: [GNBK, BN, BU, RD, PK, YEBK, VT, GYBK, YEGN, GN, WH, YE, BK] # Note that VT is actually sky blue
     notes: VT is actually sky blue
+  
+  W2:
+    gauge: 28 AWG
+    length: 0.3 m
+    colors: [RD]
+    wirecount: 1
 
 connections:
 # please activate conda environment wireviz before compiling
-  - # Test connection 1: first connection works, please uncomment to test. Thank you in advance!
+  - # C1 to C2
     - C1: [7, 8, 15, 16, 23]
     - W1: [3, 4, 10, 11, 12]
     - C2: [3, 4, 2, 5, 1]
   
-###### UNCOMMENT BELOW TO TEST COMPILATION ######
-  # - # C1 to C3
-  #   - C1: [4, 5, 11, 12, 13, 14, 24]
-  #   - W1: [1, 2, 6, 7, 8, 9, 13]
-  #   - C3: [1, 6, 4, 8, 5, 3, 7]
+  - # C1 to C3
+    - C1: [4, 5, 11, 12, 13, 14, 24]
+    - W1: [1, 2, 6, 7, 8, 9, 13]
+    - C3: [1, 6, 4, 8, 5, 3, 7]
 
-  # - # C1 to C4
-  #   - C1: [9]
-  #   - W1: [5]
-  #   - C4: [1]
+  - # C1 to C4
+    - C1: [9]
+    - W1: [5]
+    - HS1: [1]
+    - W2: [1]
+    - C4: [1]

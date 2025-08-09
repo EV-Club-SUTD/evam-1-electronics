@@ -1,16 +1,20 @@
 Id	Description	Qty	Unit	Designators	Manufacturer	MPN	Supplier	SPN
-1	Connector, Aptiv SICMA, Female, 24 pins	1		C1	Aptiv (formerly Delphi)	211PC249S0031	Mouser	649-211PC249S0031
-2	Connector, Furukawa RFW, Female, 6 pins	1		C2	Furukawa	FW-C-6F-B	Aliexpress	DJ7061Y-2.3-11
-3	Wire, 28 AWG, BK	0.3	m	W1				
-4	Wire, 28 AWG, BN	0.3	m	W1				
-5	Wire, 28 AWG, BU	0.3	m	W1				
-6	Wire, 28 AWG, GN	0.3	m	W1				
-7	Wire, 28 AWG, GNBK	0.3	m	W1				
-8	Wire, 28 AWG, GYBK	0.3	m	W1				
-9	Wire, 28 AWG, PK	0.3	m	W1				
-10	Wire, 28 AWG, RD	0.3	m	W1				
-11	Wire, 28 AWG, VT	0.3	m	W1				
-12	Wire, 28 AWG, WH	0.3	m	W1				
-13	Wire, 28 AWG, YE	0.3	m	W1				
-14	Wire, 28 AWG, YEBK	0.3	m	W1				
-15	Wire, 28 AWG, YEGN	0.3	m	W1				
+1	Cable, 1 x 28 AWG	0.3	m	W2				
+2	Connector, Aptiv SICMA, Female, 24 pins	1		C1	Aptiv (formerly Delphi)	211PC249S0031	Mouser	649-211PC249S0031
+3	Connector, Furukawa RFW, Female, 6 pins	1		C2	Furukawa	FW-C-6F-B	Aliexpress	DJ7061Y-2.3-11
+4	Connector, Heat shrink solder joint, 28 AWG	1						
+5	Connector, JST RCY, Male, 2 pins	1		C4	JST	SYR-02T-1	DigiKey	455-2653-ND
+6	Connector, Molex KK254, Female, 9 pins	1		C3	Molex	22013097	DigiKey	WM2007-MD
+7	Wire, 28 AWG, BK	0.3	m	W1				
+8	Wire, 28 AWG, BN	0.3	m	W1				
+9	Wire, 28 AWG, BU	0.3	m	W1				
+10	Wire, 28 AWG, GN	0.3	m	W1				
+11	Wire, 28 AWG, GNBK	0.3	m	W1				
+12	Wire, 28 AWG, GYBK	0.3	m	W1				
+13	Wire, 28 AWG, PK	0.3	m	W1				
+14	Wire, 28 AWG, RD	0.3	m	W1				
+15	Wire, 28 AWG, VT	0.3	m	W1				
+16	Wire, 28 AWG, WH	0.3	m	W1				
+17	Wire, 28 AWG, YE	0.3	m	W1				
+18	Wire, 28 AWG, YEBK	0.3	m	W1				
+19	Wire, 28 AWG, YEGN	0.3	m	W1				
