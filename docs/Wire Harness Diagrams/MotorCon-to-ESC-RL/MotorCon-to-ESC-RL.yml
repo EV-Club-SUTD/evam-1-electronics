@@ -24,7 +24,8 @@ connectors:
 
     # Pinout
     pincount: 24
-    pinlabels: [A1 | RTN, A2 | 12V+, A3 | ACC+, A4 | STOP, A5 | BOOST, A6 | OUT, A7 | 1HC, A8 | VH, B1, B2, B3, B4, B5, B6, B7, B8, C1, C2, C3, C4, C5, C6, C7, C8]
+    pins: [A1, A2, A3, A4, A5, A6, A7, A8, B1, B2, B3, B4, B5, B6, B7, B8, C1, C2, C3, C4, C5, C6, C7, C8]
+    pinlabels: [RTN (High Voltage Power Negative), 12V+ (for relay), ACC+ (DC+ for Accelerator), STL (~Stop), BST (Boost), OUT (Logic out), 1HC (Hall sensor C), VH (DC+ for Hall sensor), Vkey (Power on), L- (relay signal), ACC-OUT (Accelerator), R (Reverse), IN1 (Eco), MS (Pulse output), 1HB (Hall sensor B), THM (Motor thermistor), NC, 12V-, STH (Stop), F (Forward), ALM (~Motor Lock), BEMF (Back EMF), 1HA (Hall sensor A), RTN (High Voltage Power GND)]
 
   C2:
     # General
@@ -64,7 +65,7 @@ connectors:
 
     # Pinout
     pincount: 9
-    pinlabels: [M1,M2,M3,M4,M5,M6,M7,M8,M9]
+    pinlabels: [LOCK,NC,PULSE,REVERSE,ECO,BOOST,GND,ACC,EXTRA]
   
   # TODO: Check if C4 is defined correctly
   C4:
@@ -98,7 +99,7 @@ cables:
     gauge: 28 AWG
     length: 0.3 m
     colors: [GNBK, BN, BU, RD, PK, YEBK, VT, GYBK, YEGN, GN, WH, YE, BK] # Note that VT is actually sky blue
-    notes: VT is actually sky blue
+    notes: "NOTE: VT is actually sky blue"
   
   W2:
     gauge: 28 AWG
@@ -107,19 +108,20 @@ cables:
     wirecount: 1
 
 connections:
+# If using Anaconda to manage Python environments, 
 # please activate conda environment wireviz before compiling
   - # C1 to C2
-    - C1: [7, 8, 15, 16, 23]
+    - C1: [A7, A8, B7, B8, C7]
     - W1: [3, 4, 10, 11, 12]
     - C2: [3, 4, 2, 5, 1]
   
   - # C1 to C3
-    - C1: [4, 5, 11, 12, 13, 14, 24]
+    - C1: [A4, A5, B3, B4, B5, B6, C8]
     - W1: [1, 2, 6, 7, 8, 9, 13]
     - C3: [1, 6, 4, 8, 5, 3, 7]
 
   - # C1 to C4
-    - C1: [9]
+    - C1: [B1]
     - W1: [5]
     - HS1: [1]
     - W2: [1]
