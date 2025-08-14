@@ -71,7 +71,7 @@ connectors:
   C4:
     # General
     type: JST RCY
-    subtype: Male
+    subtype: Female
     image:
       src: img/JST-RCY-pinout.png # placeholder
       width: 400
@@ -80,30 +80,30 @@ connectors:
     # Purchase
     ignore_in_bom: false
     manufacturer: JST
-    mpn: SYR-02T-1
+    mpn: SYR-02T
     supplier: DigiKey
     spn: 455-2653-ND
 
     # Pinout
     pincount: 2
-    pinlabels: [J1, J2] # J2 is not implemented
+    pinlabels: [J1, J2] # J1 is not implemented
   
   HS1: # this is a piece of heat shrink'd solder joint
     style: simple
     type: Heat shrink solder joint
-    subtype: 28 AWG
+    subtype: 22 AWG
 
 cables:
   W1:
     category: bundle
-    gauge: 28 AWG
-    length: 0.3 m
-    colors: [GNBK, BN, BU, RD, PK, YEBK, VT, GYBK, YEGN, GN, WH, YE, BK] # Note that VT is actually sky blue
+    gauge: 22 AWG
+    length: 0.5 m
+    colors: [GNBK, BN, BU, RD, PK, YEBK, VT, GYBK, YEGN, GN, WH, YE, BK, BK] # Note that VT is actually sky blue
     notes: "NOTE: VT is actually sky blue"
   
   W2:
-    gauge: 28 AWG
-    length: 0.3 m
+    gauge: 22 AWG
+    length: 0.1 m
     colors: [RD]
     wirecount: 1
 
@@ -111,13 +111,13 @@ connections:
 # If using Anaconda to manage Python environments, 
 # please activate conda environment wireviz before compiling
   - # C1 to C2
-    - C1: [A7, A8, B7, B8, C7]
-    - W1: [3, 4, 10, 11, 12]
-    - C2: [3, 4, 2, 5, 1]
+    - C1: [A7, A8, B7, B8, C7, C8]
+    - W1: [3, 4, 10, 11, 12, 13]
+    - C2: [3, 4, 2, 5, 1, 6]
   
   - # C1 to C3
-    - C1: [A4, A5, B3, B4, B5, B6, C8]
-    - W1: [1, 2, 6, 7, 8, 9, 13]
+    - C1: [A4, A5, B3, B4, B5, B6, A1]
+    - W1: [1, 2, 6, 7, 8, 9, 14]
     - C3: [1, 6, 4, 8, 5, 3, 7]
 
   - # C1 to C4
@@ -125,4 +125,4 @@ connections:
     - W1: [5]
     - HS1: [1]
     - W2: [1]
-    - C4: [1]
+    - C4: [2]
