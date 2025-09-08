@@ -31,13 +31,13 @@ connectors:
     type: M12 A-key
     subtype: Female
     image:
-      src: img/FW-C-6F-B-pinout.png
+      src: img/M12-Diagram-CANCiA106.png
       width: 350
     notes: Cable side is shown
 
     # Purchase
     ignore_in_bom: false
-    manufacturer: CANZ
+    manufacturer: CAZN
     mpn: M12-S-GWB
     supplier: Taobao
     spn: 
