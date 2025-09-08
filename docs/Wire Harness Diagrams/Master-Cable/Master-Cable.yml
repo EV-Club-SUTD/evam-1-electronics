@@ -28,7 +28,7 @@ connectors:
 
   C2:
     # General
-    type: Furukawa RFW
+    type: M12 A-key
     subtype: Female
     image:
       src: img/FW-C-6F-B-pinout.png
@@ -37,59 +37,86 @@ connectors:
 
     # Purchase
     ignore_in_bom: false
-    manufacturer: Furukawa
-    mpn: FW-C-6F-B
-    supplier: Aliexpress
-    spn: DJ7061Y-2.3-11
+    manufacturer: CANZ
+    mpn: M12-S-GWB
+    supplier: Taobao
+    spn: 
 
     # Pinout
     pincount: 6
-    pinlabels: [H1,H2,H3,H4,H5,H6]
-  
-  # TODO: Check if C4 is defined correctly
-  C4:
-    # General
-    type: JST RCY
-    subtype: Female
-    image:
-      src: img/JST-RCY-pinout.png # placeholder
-      width: 400
-    notes: Cable side is shown
-
-    # Purchase
-    ignore_in_bom: false
-    manufacturer: JST
-    mpn: SYR-02T
-    supplier: DigiKey
-    spn: 455-2653-ND
-
-    # Pinout
-    pincount: 2
-    pinlabels: [J1, J2] # J1 is not implemented
+    pinlabels: ['1','2','3','4','5','6']
   
   HS1: # this is a piece of heat shrink'd solder joint
     style: simple
     type: Heat shrink solder joint
     subtype: 22 AWG
 
+  HS2: # this is a piece of heat shrink'd solder joint
+    style: simple
+    type: Heat shrink solder joint
+    subtype: 22 AWG
+
+  HS3: # this is a piece of heat shrink'd solder joint
+    style: simple
+    type: Heat shrink solder joint
+    subtype: 22 AWG
+
+  HS4: # this is a piece of heat shrink'd solder joint
+    style: simple
+    type: Heat shrink solder joint
+    subtype: 22 AWG
+
 cables:
   W1:
-    category: bundle
     gauge: 22 AWG
     length: 0.5 m
-    colors: [GNBK, BN, BU, RD, PK, YEBK, VT, GYBK, YEGN, GN, WH, YE, BK, BK] # Note that VT is actually sky blue
-    notes: "NOTE: VT is actually sky blue"
+    colors: [BN, WH, RD, BK, YE, GN]
   
   W2:
     gauge: 22 AWG
     length: 0.1 m
-    colors: [RD]
+    colors: [BK, GY]
+
+  W3:
+    gauge: 22 AWG
+    length: 0.1 m
+    colors: [GY]
+    wirecount: 1
+
+  W4:
+    category: bundle
+    gauge: 22 AWG
+    length: 0.1 m
+    colors: [WH]
     wirecount: 1
 
 connections:
 # If using Anaconda to manage Python environments, 
 # please activate conda environment wireviz before compiling
-  - # C1 to C2
-    - C1: [1, 2, 3, 4, 5, 6]
-    - W1: [3, 4, 10, 11, 12, 13]
-    - C2: [3, 4, 2, 5, 1, 6]
+  - # C1 to HS1 to C2, Yellow Wire
+    - C1: [5]
+    - W1: [5]
+    - HS1: [1]
+    - W2: [1]
+    - C2: [4]
+
+  - # C1 to HS2 to C2, Green Wire
+    - C1: [6]
+    - W1: [6]
+    - HS2: [1]
+    - W2: [2]
+    - C2: [5]
+
+  - # C1 to W1, Red and Black Floating Wires
+    - C1: [3, 4]
+    - W1: [3, 4]
+
+  - # C1 to W4, White wire
+    - C1: [2]
+    - W1: [2]
+    - HS3: [1]
+
+  - # C1 to W4, Brown wire
+    - C1: [1]
+    - W1: [1]
+    - HS4: [1]
