@@ -31,7 +31,7 @@ connectors:
     type: M12 A-key
     subtype: Female
     image:
-      src: img/FW-C-6F-B-pinout.png
+      src: img/M12-Diagram-CANCiA106.png
       width: 350
     notes: Cable side is shown
 
@@ -45,6 +45,66 @@ connectors:
     # Pinout
     pincount: 6
     pinlabels: ['1','2','3','4','5','6']
+
+  C3:
+    # General
+    type: JST RCY
+    subtype: Female
+    image:
+      src: img/JST-RCY-pinout.png # placeholder
+      width: 400
+    notes: Cable side is shown
+
+    # Purchase
+    ignore_in_bom: false
+    manufacturer: JST
+    mpn: SYR-02T
+    supplier: DigiKey
+    spn: 455-2653-ND
+
+    # Pinout
+    pincount: 2
+    pinlabels: [J1, J2] # J1 is not implemented
+    
+  C4:
+    # General
+    type: JST RCY
+    subtype: Male
+    image:
+      src: img/JST-RCY-pinout.png # placeholder
+      width: 400
+    notes: Cable side is shown
+
+    # Purchase
+    ignore_in_bom: false
+    manufacturer: JST
+    mpn: SYR-02T
+    supplier: DigiKey
+    spn: 455-2653-ND
+
+    # Pinout
+    pincount: 2
+    pinlabels: [J1, J2] # J1 is not implemented
+    
+  C5:
+    # General
+    type: JST RCY
+    subtype: Female
+    image:
+      src: img/JST-RCY-pinout.png # placeholder
+      width: 400
+    notes: Cable side is shown
+
+    # Purchase
+    ignore_in_bom: false
+    manufacturer: JST
+    mpn: SYR-02T
+    supplier: DigiKey
+    spn: 455-2653-ND
+
+    # Pinout
+    pincount: 2
+    pinlabels: [J1, J2] # J1 is not implemented
   
   HS1: # this is a piece of heat shrink'd solder joint
     style: simple
@@ -66,6 +126,16 @@ connectors:
     type: Heat shrink solder joint
     subtype: 22 AWG
 
+  HS5: # this is a piece of heat shrink'd solder joint
+    style: simple
+    type: Heat shrink solder joint
+    subtype: 22 AWG
+    
+  HS6: # this is a piece of heat shrink'd solder joint
+    style: simple
+    type: Heat shrink solder joint
+    subtype: 22 AWG
+
 cables:
   W1:
     gauge: 22 AWG
@@ -75,19 +145,43 @@ cables:
   W2:
     gauge: 22 AWG
     length: 0.1 m
-    colors: [BK, GY]
+    colors: [RD]
+    wirecount: 1
 
   W3:
     gauge: 22 AWG
     length: 0.1 m
-    colors: [GY]
-    wirecount: 1
+    colors: [BK, GY]
 
   W4:
+    gauge: 22 AWG
+    length: 0.1 m
+    colors: [RD]
+    wirecount: 1
+
+  W5:
     category: bundle
     gauge: 22 AWG
     length: 0.1 m
-    colors: [WH]
+    colors: [BN]
+    wirecount: 1
+
+  W6:
+    gauge: 22 AWG
+    length: 0.1 m
+    colors: [RD]
+    wirecount: 1
+
+  W7:
+    gauge: 22 AWG
+    length: 0.1 m
+    colors: [BK]
+    wirecount: 1
+
+  W10: #Current placeholder wire for where estop switch should be
+    gauge: 22 AWG
+    length: 0.1 m
+    colors: [RD]
     wirecount: 1
 
 connections:
@@ -97,14 +191,14 @@ connections:
     - C1: [5]
     - W1: [5]
     - HS1: [1]
-    - W2: [1]
+    - W3: [1]
     - C2: [4]
 
   - # C1 to HS2 to C2, Green Wire
     - C1: [6]
     - W1: [6]
     - HS2: [1]
-    - W2: [2]
+    - W3: [2]
     - C2: [5]
 
   - # C1 to W1, Red and Black Floating Wires
@@ -115,8 +209,20 @@ connections:
     - C1: [2]
     - W1: [2]
     - HS3: [1]
+    - W7: [1]
+    - C5: [J1]
 
   - # C1 to W4, Brown wire
     - C1: [1]
     - W1: [1]
     - HS4: [1]
+    - W2: [1]
+    - C3: [J2]
+    - W10: [1]
+    - C4: [J2]
+    - W4: [1]
+    - HS5: [1]
+    - W5: [1]
+    - HS6: [1]
+    - W6: [1]
+    - C5: [J2]
