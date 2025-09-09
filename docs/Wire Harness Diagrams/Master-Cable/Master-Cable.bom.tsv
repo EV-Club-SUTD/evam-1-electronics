@@ -1,6 +1,17 @@
 Id	Description	Qty	Unit	Designators	Manufacturer	MPN	Supplier	SPN
-1	Cable, 2 x 22 AWG	0.1	m	W2				
-2	Cable, 6 x 22 AWG	0.5	m	W1				
-3	Connector, GX16-6 Reverse Type, Male, 6 pins	1		C1	Renhotec	GX16-A-6-P	Aliexpress	1005008016363970
-4	Connector, Heat shrink solder joint, 22 AWG	4						
-5	Connector, M12 A-key, Female, 6 pins	1		C2	CAZN	M12-S-GWB	Taobao	
+1	Cable, 1 x 22 AWG	0.4	m	W5, W6, W7, W8				
+2	Cable, 2 x 22 AWG	0.2	m	W2, W9				
+3	Cable, 6 x 22 AWG	0.5	m	W1				
+4	Connector, E-Stop Switch, 22 AWG	1						
+5	Connector, Fork terminal, 22 AWG, BK	1						
+6	Connector, Fork terminal, 22 AWG, RD	1						
+7	Connector, GX16-6 Reverse Type, Male, 6 pins	1		C1	Renhotec	GX16-A-6-P	Aliexpress	1005008016363970
+8	Connector, Heat shrink solder joint, 22 AWG	6						
+9	Connector, JST RCY, Plug, 2 pins	4		C4, C5, C7, C8	JST	SYR-02T	DigiKey	455-2653-ND
+10	Connector, JST RCY, Receptacle, 2 pins	2		C3, C6	JST	SYR-02T	DigiKey	455-2653-ND
+11	Connector, M12 A-key, Female, 6 pins	1		C2	CAZN	M12-S-GWB	Taobao	
+12	Connector, exposed section, 22 AWG	3						
+13	Wire, 22 AWG, BK	0.2	m	W10, W4				
+14	Wire, 22 AWG, BN	0.1	m	W4				
+15	Wire, 22 AWG, RD	0.2	m	W10, W4				
+16	Wire, 22 AWG, WH	0.1	m	W4				
