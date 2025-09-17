@@ -2682,7 +2682,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
-    (model "${KICAD7_3RD_PARTY}/3dmodels/industries_fourier_kicad-libraries/FourierIndustries_KiCadLib.3dshapes/TE_T4145015051-001.step"
+    (model "${KICAD8_3RD_PARTY}/3dmodels/industries_fourier_kicad-libraries/FourierIndustries_KiCadLib.3dshapes/TE_T4145015051-001.step"
       (offset (xyz 0 -23 8.5))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -3479,7 +3479,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
-    (model "${KICAD7_3RD_PARTY}/3dmodels/industries_fourier_kicad-libraries/FourierIndustries_KiCadLib.3dshapes/TE_T4145015051-001.step"
+    (model "${KICAD8_3RD_PARTY}/3dmodels/industries_fourier_kicad-libraries/FourierIndustries_KiCadLib.3dshapes/TE_T4145015051-001.step"
       (offset (xyz 0 -23 8.5))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))

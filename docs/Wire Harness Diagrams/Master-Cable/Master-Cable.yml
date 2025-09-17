@@ -51,7 +51,7 @@ connectors:
     type: JST RCY
     subtype: Receptacle
     image:
-      src: img/JST-RCY-pinout.png # placeholder
+      src: img/JST-RCY-pinout-receptacle.png # placeholder
       width: 400
     notes: Cable side is shown
 
@@ -71,7 +71,7 @@ connectors:
     type: JST RCY
     subtype: Plug
     image:
-      src: img/JST-RCY-pinout.png # placeholder
+      src: img/JST-RCY-pinout-plug.png # placeholder
       width: 400
     notes: Cable side is shown
 
@@ -151,7 +151,7 @@ connectors:
     type: JST RCY
     subtype: Plug
     image:
-      src: img/JST-RCY-pinout.png # placeholder
+      src: img/JST-RCY-pinout-plug.png # placeholder
       width: 400
     notes: Cable side is shown
 
@@ -240,18 +240,21 @@ cables:
     colors: [RD]
     wirecount: 1
 
+<<<<<<< HEAD
   W3:
     gauge: 22 AWG
     length: 0.1 m
     colors: [BK, GY]
 
+=======
+>>>>>>> 140bc5584d974021c13fba2add34b92e423dbd8b
   W4:
     gauge: 22 AWG
     length: 0.1 m
-    colors: [RD]
+    colors: [GY]
     wirecount: 1
 
-  W5:
+  W4:
     category: bundle
     gauge: 22 AWG
     length: 0.1 m
