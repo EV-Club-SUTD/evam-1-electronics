@@ -37,7 +37,7 @@ connectors:
 
     # Purchase
     ignore_in_bom: false
-    manufacturer: CANZ
+    manufacturer: CAZN
     mpn: M12-S-GWB
     supplier: Taobao
     spn: 
@@ -45,11 +45,11 @@ connectors:
     # Pinout
     pincount: 6
     pinlabels: ['1','2','3','4','5','6']
-
+  
   C3:
     # General
     type: JST RCY
-    subtype: Female
+    subtype: Receptacle
     image:
       src: img/JST-RCY-pinout.png # placeholder
       width: 400
@@ -65,11 +65,11 @@ connectors:
     # Pinout
     pincount: 2
     pinlabels: [J1, J2] # J1 is not implemented
-    
+
   C4:
     # General
     type: JST RCY
-    subtype: Male
+    subtype: Plug
     image:
       src: img/JST-RCY-pinout.png # placeholder
       width: 400
@@ -85,11 +85,11 @@ connectors:
     # Pinout
     pincount: 2
     pinlabels: [J1, J2] # J1 is not implemented
-    
+
   C5:
     # General
     type: JST RCY
-    subtype: Female
+    subtype: Plug
     image:
       src: img/JST-RCY-pinout.png # placeholder
       width: 400
@@ -105,7 +105,67 @@ connectors:
     # Pinout
     pincount: 2
     pinlabels: [J1, J2] # J1 is not implemented
-  
+
+  C6:
+    # General
+    type: JST RCY
+    subtype: Receptacle
+    image:
+      src: img/JST-RCY-pinout.png # placeholder
+      width: 400
+    notes: Cable side is shown
+
+    # Purchase
+    ignore_in_bom: false
+    manufacturer: JST
+    mpn: SYR-02T
+    supplier: DigiKey
+    spn: 455-2653-ND
+
+    # Pinout
+    pincount: 2
+    pinlabels: [J1, J2] # J1 is not implemented
+
+  C7:
+    # General
+    type: JST RCY
+    subtype: Plug
+    image:
+      src: img/JST-RCY-pinout.png # placeholder
+      width: 400
+    notes: Cable side is shown
+
+    # Purchase
+    ignore_in_bom: false
+    manufacturer: JST
+    mpn: SYR-02T
+    supplier: DigiKey
+    spn: 455-2653-ND
+
+    # Pinout
+    pincount: 2
+    pinlabels: [J1, J2] # J1 is not implemented
+
+  C8:
+    # General
+    type: JST RCY
+    subtype: Plug
+    image:
+      src: img/JST-RCY-pinout.png # placeholder
+      width: 400
+    notes: Cable side is shown
+
+    # Purchase
+    ignore_in_bom: false
+    manufacturer: JST
+    mpn: SYR-02T
+    supplier: DigiKey
+    spn: 455-2653-ND
+
+    # Pinout
+    pincount: 2
+    pinlabels: [J1, J2] # J1 is not implemented
+
   HS1: # this is a piece of heat shrink'd solder joint
     style: simple
     type: Heat shrink solder joint
@@ -126,14 +186,46 @@ connectors:
     type: Heat shrink solder joint
     subtype: 22 AWG
 
+  SW1: # this is a side e-stop switch
+    style: simple
+    type: E-Stop Switch
+    subtype: 22 AWG
+
   HS5: # this is a piece of heat shrink'd solder joint
     style: simple
     type: Heat shrink solder joint
     subtype: 22 AWG
-    
+
   HS6: # this is a piece of heat shrink'd solder joint
     style: simple
     type: Heat shrink solder joint
+    subtype: 22 AWG
+
+  E1: # exposed section
+    style: simple
+    type: exposed section
+    subtype: 22 AWG
+
+  F1: # fork terminal
+    style: simple
+    type: Fork terminal
+    color: RD
+    subtype: 22 AWG
+
+  F2: # fork terminal
+    style: simple
+    type: Fork terminal
+    color: BK
+    subtype: 22 AWG
+
+  E2: # exposed section
+    style: simple
+    type: exposed section
+    subtype: 22 AWG
+
+  E3: # exposed section
+    style: simple
+    type: exposed section
     subtype: 22 AWG
 
 cables:
@@ -163,7 +255,12 @@ cables:
     category: bundle
     gauge: 22 AWG
     length: 0.1 m
-    colors: [BN]
+    colors: [BN, WH, BK, RD]
+
+  W5:
+    gauge: 22 AWG
+    length: 0.1 m
+    colors: [RD]
     wirecount: 1
 
   W6:
@@ -175,14 +272,25 @@ cables:
   W7:
     gauge: 22 AWG
     length: 0.1 m
-    colors: [BK]
+    colors: [RD]
     wirecount: 1
 
-  W10: #Current placeholder wire for where estop switch should be
+  W8:
     gauge: 22 AWG
     length: 0.1 m
     colors: [RD]
     wirecount: 1
+
+  W9:
+    gauge: 22 AWG
+    length: 0.1 m
+    colors: [BK, RD]
+
+  W10:
+    category: bundle
+    gauge: 22 AWG
+    length: 0.1 m
+    colors: [BK, RD]
 
 connections:
 # If using Anaconda to manage Python environments, 
@@ -208,21 +316,45 @@ connections:
   - # C1 to W4, White wire
     - C1: [2]
     - W1: [2]
+    - E1: [1]
+    - W4: [2]
     - HS3: [1]
-    - W7: [1]
-    - C5: [J1]
+    - W9: [1]
+    - C7: [1]
 
   - # C1 to W4, Brown wire
     - C1: [1]
     - W1: [1]
     - HS4: [1]
-    - W2: [1]
-    - C3: [J2]
-    - W10: [1]
-    - C4: [J2]
-    - W4: [1]
-    - HS5: [1]
     - W5: [1]
-    - HS6: [1]
+    - C3: [2]
+    - <=> 
+    - C4: [2]
     - W6: [1]
-    - C5: [J2]
+    - SW1: [1]
+    - W7: [1]
+    - C5: [2]
+    - <=>
+    - C6: [2]
+    - W8: [1]
+    - HS5: [1]
+    - W4: [1]
+    - HS6: [1]
+    - W9: [2]
+    - C7: [2]
+
+  - # F1 to RCY, Red Wire
+    - F1: [1]
+    - W10: [2]
+    - E2: [1]
+    - W4: [4]
+    - C8: [2]
+
+  - # F2 to RCY, Black Wire
+    - F2: [1]
+    - W10: [1]
+    - E3: [1]
+    - W4: [3]
+
+
+
